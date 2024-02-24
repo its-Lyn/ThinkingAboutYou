@@ -1,0 +1,180 @@
+[gd_scene load_steps=8 format=3 uid="uid://clyt8fnkr7pwr"]
+
+[ext_resource type="Script" path="res://Scripts/States/Settings.gd" id="1_4saic"]
+[ext_resource type="LabelSettings" uid="uid://bpwrt0hdxa2pn" path="res://Assets/Themes/LabelStats.tres" id="2_3bn8y"]
+[ext_resource type="LabelSettings" uid="uid://ykw0fftt8mcw" path="res://Assets/Themes/SettingsHeaders.tres" id="3_5k7yf"]
+[ext_resource type="Texture2D" uid="uid://cogkya6hf3owj" path="res://Assets/Buttons/Back.png" id="3_36xwc"]
+[ext_resource type="Theme" uid="uid://bb46q7wfaoj0s" path="res://Assets/Themes/UI.tres" id="3_bplo1"]
+[ext_resource type="Texture2D" uid="uid://cnv53o24iwike" path="res://Assets/Buttons/trash.png" id="5_y5hla"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1iia0"]
+load_path = "res://.godot/imported/trash.png-a3f8a38b379aef6159b63def40fc7b2c.ctex"
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_4saic")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Header" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.5
+offset_top = 150.0
+offset_right = 116.5
+offset_bottom = 233.0
+grow_horizontal = 2
+text = "Settings"
+label_settings = ExtResource("2_3bn8y")
+
+[node name="Avatar" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = 76.0
+offset_right = 435.0
+offset_bottom = 131.0
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+text = "Webhook Avatar"
+label_settings = ExtResource("3_5k7yf")
+
+[node name="AvatarBox" type="TextEdit" parent="CanvasLayer/Control/Avatar"]
+layout_mode = 0
+offset_top = 41.6666
+offset_right = 719.0
+offset_bottom = 77.6666
+theme = ExtResource("3_bplo1")
+placeholder_text = "Name here..."
+
+[node name="Name" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = -25.0
+offset_right = 424.0
+offset_bottom = 30.0
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+text = "Webhook Name"
+label_settings = ExtResource("3_5k7yf")
+
+[node name="NameBox" type="TextEdit" parent="CanvasLayer/Control/Name"]
+layout_mode = 0
+offset_top = 41.6667
+offset_right = 719.0
+offset_bottom = 77.6667
+theme = ExtResource("3_bplo1")
+placeholder_text = "Avatar here..."
+caret_blink = true
+
+[node name="URL" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = -137.0
+offset_right = 435.0
+offset_bottom = -82.0
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+text = "Webhook URL
+"
+label_settings = ExtResource("3_5k7yf")
+
+[node name="URLBox" type="TextEdit" parent="CanvasLayer/Control/URL"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 719.0
+offset_bottom = 76.0
+theme = ExtResource("3_bplo1")
+placeholder_text = "URL here..."
+caret_blink = true
+
+[node name="YourName" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = -294.0
+offset_right = 280.0
+offset_bottom = -252.0
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+text = "Your Name"
+label_settings = ExtResource("3_5k7yf")
+
+[node name="YourNameBox" type="TextEdit" parent="CanvasLayer/Control/YourName"]
+layout_mode = 0
+offset_top = 41.6667
+offset_right = 719.0
+offset_bottom = 76.6667
+theme = ExtResource("3_bplo1")
+placeholder_text = "Your name here..."
+caret_blink = true
+
+[node name="Apply" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.5
+offset_top = -120.0
+offset_right = 103.5
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_bplo1")
+text = "Apply Settings"
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 29.0
+offset_right = 552.0
+offset_bottom = 541.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("3_36xwc")
+texture_pressed = ExtResource("3_36xwc")
+
+[node name="DeleteSave" type="TextureButton" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -120.0
+offset_right = 402.0
+offset_bottom = 392.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("5_y5hla")
+texture_pressed = SubResource("CompressedTexture2D_1iia0")
+
+[connection signal="pressed" from="CanvasLayer/Control/Apply" to="." method="_on_apply_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/DeleteSave" to="." method="_on_delete_save_pressed"]

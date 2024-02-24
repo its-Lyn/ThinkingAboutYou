@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Thinking About You"
+run/main_scene="res://Scenes/States/Main.tscn"
+config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0.94902, 0.882353, 0.968627, 1)
+config/icon="res://Assets/Icons/heart512.png"
+
+[autoload]
+
+Webhook="*res://Scenes/Globals/Webhook.tscn"
+Saves="*res://Scripts/Globals/Saves.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/mode=2
+window/handheld/orientation=1
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.984314, 0.956863, 0.996078, 1)

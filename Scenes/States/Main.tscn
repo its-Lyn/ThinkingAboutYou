@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkisbbdabor8j"]
+
+[ext_resource type="Script" path="res://Scripts/States/Main.gd" id="1_iwjrw"]
+[ext_resource type="LabelSettings" uid="uid://bpwrt0hdxa2pn" path="res://Assets/Themes/LabelStats.tres" id="1_ywsti"]
+[ext_resource type="Texture2D" uid="uid://dais0iygoh6yf" path="res://Assets/Buttons/settings-cog.svg" id="3_68p1c"]
+[ext_resource type="Theme" uid="uid://bb46q7wfaoj0s" path="res://Assets/Themes/UI.tres" id="3_ikvgc"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_iwjrw")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Header" type="Label" parent="UILayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.0
+offset_top = 150.0
+offset_right = 106.0
+offset_bottom = 233.0
+grow_horizontal = 2
+text = "Details"
+label_settings = ExtResource("1_ywsti")
+
+[node name="Details" type="Label" parent="UILayer/Control/Header"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -385.5
+offset_top = 184.0
+offset_right = 380.5
+offset_bottom = 697.0
+grow_horizontal = 2
+text = "- Messages Sent: 0
+- Your name: Undefined
+
+- Webhook: None
+- Webhook Name: Default
+- Webhook Avatar: Default"
+label_settings = ExtResource("1_ywsti")
+
+[node name="Send" type="Button" parent="UILayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -126.0
+offset_right = 106.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_ikvgc")
+text = "Send Reminder!"
+
+[node name="Settings" type="TextureButton" parent="UILayer/Control"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 29.0
+offset_right = 840.0
+offset_bottom = 829.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_68p1c")
+texture_pressed = ExtResource("3_68p1c")
+
+[connection signal="pressed" from="UILayer/Control/Send" to="." method="_on_send_pressed"]
+[connection signal="pressed" from="UILayer/Control/Settings" to="." method="_on_settings_pressed"]

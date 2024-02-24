@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://br0tphnwje7t4"]
+
+[ext_resource type="Script" path="res://Scripts/Globals/Webhook.gd" id="1_0rc1f"]
+
+[node name="Webhook" type="Node"]
+script = ExtResource("1_0rc1f")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
