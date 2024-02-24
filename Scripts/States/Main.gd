@@ -46,10 +46,6 @@ func _ready():
 
 
 func _on_settings_pressed():
-	get_tree().change_scene_to_file("res://Scenes/States/Settings.tscn")
-
-
-func _on_send_pressed():
 	if not saves == null:
 		Saves.Save(
 			saves["user_name"], 
@@ -58,7 +54,19 @@ func _on_send_pressed():
 			saves["webhook_avatar"]
 		)
 	
-		Webhook.SendPayload(saves)
-		
+	get_tree().change_scene_to_file("res://Scenes/States/Settings.tscn")
+
+
+func _on_send_pressed():
+	Webhook.SendPayload(saves)
+	
+	if not saves == null:
+		Saves.Save(
+			saves["user_name"], 
+			saves["webhook_name"], 
+			saves["webhook_url"], 
+			saves["webhook_avatar"]
+		)
+
 		create_details()
 

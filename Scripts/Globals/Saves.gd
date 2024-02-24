@@ -1,6 +1,6 @@
 extends Node
 
-var num_saves = 0
+var num_saves
 
 func Save(user_name: String, webhook_name: String, webhook_url: String, webhook_avatar: String):
 	var save_model = {
@@ -20,6 +20,7 @@ func Save(user_name: String, webhook_name: String, webhook_url: String, webhook_
 
 func Load():
 	if not FileAccess.file_exists("user://data.save"):
+		num_saves = 0
 		return null
 	
 	var data = FileAccess.open("user://data.save", FileAccess.READ)
@@ -30,6 +31,7 @@ func Load():
 	assert(is_error == OK, "JSON Parse Error: %s at line %d" % [parser.get_error_message(), parser.get_error_line()])
 	
 	var save = parser.data
+	num_saves = save["num_sent"]
 	
 	data.close()
 	

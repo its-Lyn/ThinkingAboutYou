@@ -56,11 +56,11 @@ label_settings = ExtResource("3_5k7yf")
 
 [node name="AvatarBox" type="TextEdit" parent="CanvasLayer/Control/Avatar"]
 layout_mode = 0
-offset_top = 41.6666
-offset_right = 719.0
-offset_bottom = 77.6666
+offset_top = 42.0
+offset_right = 538.0
+offset_bottom = 78.0
 theme = ExtResource("3_bplo1")
-placeholder_text = "Name here..."
+placeholder_text = "Avatar here..."
 
 [node name="Name" type="Label" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -78,11 +78,11 @@ label_settings = ExtResource("3_5k7yf")
 
 [node name="NameBox" type="TextEdit" parent="CanvasLayer/Control/Name"]
 layout_mode = 0
-offset_top = 41.6667
-offset_right = 719.0
-offset_bottom = 77.6667
+offset_top = 42.0
+offset_right = 538.0
+offset_bottom = 78.0
 theme = ExtResource("3_bplo1")
-placeholder_text = "Avatar here..."
+placeholder_text = "Name here..."
 caret_blink = true
 
 [node name="URL" type="Label" parent="CanvasLayer/Control"]
@@ -103,7 +103,7 @@ label_settings = ExtResource("3_5k7yf")
 [node name="URLBox" type="TextEdit" parent="CanvasLayer/Control/URL"]
 layout_mode = 0
 offset_top = 40.0
-offset_right = 719.0
+offset_right = 538.0
 offset_bottom = 76.0
 theme = ExtResource("3_bplo1")
 placeholder_text = "URL here..."
@@ -125,9 +125,9 @@ label_settings = ExtResource("3_5k7yf")
 
 [node name="YourNameBox" type="TextEdit" parent="CanvasLayer/Control/YourName"]
 layout_mode = 0
-offset_top = 41.6667
-offset_right = 719.0
-offset_bottom = 76.6667
+offset_top = 42.0
+offset_right = 538.0
+offset_bottom = 77.0
 theme = ExtResource("3_bplo1")
 placeholder_text = "Your name here..."
 caret_blink = true

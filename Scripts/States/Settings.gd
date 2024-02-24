@@ -47,5 +47,4 @@ func _on_delete_save_pressed():
 	if not FileAccess.file_exists("user://data.save"):
 		return
 	
-	Saves.num_saves = 0
 	DirAccess.remove_absolute("user://data.save")
